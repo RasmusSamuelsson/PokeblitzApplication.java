@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title th:replace="fragments :: title"></title>
+<head th:replace="fragments :: head"></head>
+<head><link rel="stylesheet" th:href="@{/css/openpack.css}"></head>
+<nav th:replace="fragments :: navigation"></nav>
+
+<body>
+
+<div class="container">
+  <div th:each="pack : ${session.playerPacks}" class="row m-auto text-center w-75">
+
+    <form th:action="@{/packOpening}" method="POST">
+
+        <div th:classappend = "${((pack.tier == 1) ? 'common-pack' : '') +
+                      ((pack.tier == 2) ? 'uncommon-pack' : '') +
+                      ((pack.tier == 3) ? 'rare-pack' : '') +
+                      ((pack.tier == 4) ? 'epic-pack' : '')
+                      }"
+             class="col-4 pack-item">
+          <div class="pack">
+            <img th:classappend = "${((pack.tier == 1) ? 'common-pack-img' : '') +
+                      ((pack.tier == 2) ? 'uncommon-pack-img' : '') +
+                      ((pack.tier == 3) ? 'rare-pack-img' : '') +
+                      ((pack.tier == 4) ? 'epic-pack-img' : '')
+                      }"
+                 class="card-pic"/>
+          </div>
+          <div class="card-body bg-white mt-0 shadow">
+            <ul class="list-unstyled mb-5 position-relative">
+              <li th:if="${pack.tier == 1}"><b th:classappend = "${pack.tier == 1 ? 'common-pack-hl' : ''}">Common Pack</b></li>
+              <li th:if="${pack.tier == 2}"><b th:classappend = "${pack.tier == 2 ? 'uncommon-pack-hl' : ''}">Uncommon Pack</b></li>
+              <li th:if="${pack.tier == 3}"><b th:classappend = "${pack.tier == 3 ? 'rare-pack-hl' : ''}">Rare Pack</b></li>
+              <li th:if="${pack.tier == 4}"><b th:classappend = "${pack.tier == 4 ? 'epic-pack-hl' : ''}">Epic Pack</b></li>
+              <li>
+                <b class="common-pack-text-hl">Includes</b>
+                <p th:text="${pack.pokemonAmount} + ' pokemons'"></p>
+              </li>
+            </ul>
+            <input type="hidden" name="packId" th:value="${pack.id}"/>
+            <button type="submit"
+                    th:classappend = "${((pack.tier == 1) ? 'btn-common' : '') +
+                      ((pack.tier == 2) ? 'btn-uncommon' : '') +
+                      ((pack.tier == 3) ? 'btn-rare' : '') +
+                      ((pack.tier == 4) ? 'btn-epic' : '')
+                      }"
+                    class="btn btn-lg btn-block btn-custom open-button">Open</button>
+          </div>
+        </div>
+      </canvas>
+    </form>
+  </div>
+</div>
+
+<script th:src="@{/js/packOpening.js}"></script>
+</body>
+</html>

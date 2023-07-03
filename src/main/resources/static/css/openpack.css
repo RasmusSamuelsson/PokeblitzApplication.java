@@ -1,0 +1,203 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(5, 5, 5, 0.5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.w-75{
+    width: 30% !important;
+    padding-bottom: 30px
+}
+
+.pack {
+    padding: 5em 0 4em;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+
+/*COMMON PACK*/
+
+.common-pack .pack {
+   background: #f7db6e;
+}
+
+.common-pack-hl{
+    color: #f7db6e;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.common-pack-img{
+    width: 60%;
+    content:url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png);
+}
+
+.btn-common{
+    background: #f7db6e;
+    color: white;
+}
+
+/*UNCOMMON PACK*/
+
+.uncommon-pack .pack {
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(210,148,233,1) 100%);
+}
+
+.uncommon-pack-hl{
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #d698e4;
+}
+
+.uncommon-pack-img{
+    width: 60%;
+    content:url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/104.png);
+}
+
+.btn-uncommon{
+    background: #d698e4;
+    color: white;
+}
+
+/*RARE PACK*/
+
+.rare-pack .pack {
+    background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(121, 9, 112) 35%, rgb(0, 212, 255) 100%);
+}
+
+.rare-pack-hl{
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #2b8acb;
+}
+
+.rare-pack-img{
+    width: 60%;
+    content:url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/31.png);
+}
+
+.btn-rare{
+    background: #2b8acb;
+    color: white;
+}
+
+/*EPIC PACK*/
+
+.epic-pack-hl{
+    text-transform: uppercase;
+    color: #e8579b;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.epic-pack-img{
+    width: 60%;
+    content:url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/151.png);
+}
+
+.btn-epic{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: auto;
+    background-size: 400% 400%;
+    animation: gradient 3s cubic-bezier(.45,.05,.55,.95) infinite;
+    color: white;
+}
+
+.epic-pack .pack{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.pricing-divider-img {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 80px;
+}
+
+.btn-custom  {
+
+}
+
+.img-float {
+  width:50px; position:absolute;top:-3.5rem;right:1rem
+}
+
+.pack-item {
+  transition: all 150ms ease-out;
+  margin-top: 50px
+}
+.pack-item:hover {
+  transform: scale(1.05);
+}
+.pack-item:hover .deco-layer--1 {
+  -webkit-transform: translate3d(15px, 0, 0);
+  transform: translate3d(15px, 0, 0);
+}
+.pack-item:hover .deco-layer--2 {
+  -webkit-transform: translate3d(-15px, 0, 0);
+  transform: translate3d(-15px, 0, 0);
+}
+.deco-layer {
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.col-4{
+    max-width: none !important;
+}
+
+.col-md-4{
+    max-width: 19.3% !important;
+}
+
+.card-body{
+    width: 100% !important;
+}
+
+.btn{
+    text-transform: uppercase !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+
+/*GRADIENT BORDER*/
+
+.gradient-border {
+  border: 4px solid transparent;
+  border-image-source: linear-gradient(45deg, #1fddff, #2C7744, #F0CB35, #fc00ff);
+  border-image-slice: 1;
+}
+.gradient {
+  width: 50%;
+  padding: 1rem;
+  background: #d1d1d1;
+  font: 1rem sans-serif;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,111 @@
+body {
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+  text-align: center;
+  background-color: #E4D600;
+  color: black;
+  opacity: 0.9;
+  border: 4px solid #4CA9CE;
+}
+.about-section:hover {
+  background-color: #E48900;
+  transition: all 0.2s ease-in-out;
+}
+
+.container {
+  padding: 0 16px;
+  width: 100%;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-info {
+ border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.text-container {
+  text-align: center;
+  /*font-family: Arial, sans-serif;*/
+  color: #333;
+  padding: 20px;
+  line-height: 1.5;
+
+}
+
+p {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+
+.about {
+display: flex;
+justify-content: space-between;
+}
+
+.size {
+    width: 20%;
+    height: 30%;
+}
+
+<!-- POPUP TEXT-->
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{fragments :: head}"></head>
+    <nav th:replace="~{fragments :: navigation}"></nav>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/starterpack.css}">
+    <link rel="stylesheet" th:href="@{/css/test2.css}">
+
+    <link rel="icon" th:href="@{/images/pokemon-icon.svg}">
+
+</head>
+<body>
+<div class="container">
+    <div class="flip-card" th:each="pokemon : ${session.loot}" onclick="this.classList.toggle('flip');">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img class="front-img" src="/images/pokemon-card-back2.png">
+            </div>
+            <div class="flip-card-back">
+                <img class="back-img" th:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + ${pokemon.pokemonNumber} + '.png'">
+                <h1 th:text="${pokemon.name}"></h1>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<button role="button" class="profie-button" onclick="location.href = '/profile';">Back to profile</button>
+</body>
+</html>
